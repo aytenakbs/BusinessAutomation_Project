@@ -1,2 +1,2 @@
 # BusinessAutomation_Project
- Udemy Online Ticari Otomasyon Projesi - Murat Yücedağ
+ Udemy Online Ticari Otomasyon  - Murat Yücedağ
