@@ -77,3 +77,7 @@ C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAut
 C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\obj\Debug\BusinessAutomation_Project.csproj.CopyComplete
 C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\obj\Debug\BusinessAutomation_Project.dll
 C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\obj\Debug\BusinessAutomation_Project.pdb
+C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\EntityFramework.dll
+C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\EntityFramework.SqlServer.dll
+C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\EntityFramework.xml
+C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\EntityFramework.SqlServer.xml
