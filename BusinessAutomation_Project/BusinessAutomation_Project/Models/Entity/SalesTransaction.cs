@@ -10,9 +10,9 @@ namespace BusinessAutomation_Project.Models.Entity
     {
         [Key] 
         public int SalesId { get; set; }
-        public ICollection<Product> Products { get; set; }
-        public ICollection<Employee> Employees { get; set; }
-        public ICollection<Customer> Customers { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual Customer Customer { get; set; }
         public DateTime Date { get; set; }
         public int Amount { get; set; }
         public decimal Price { get; set; }

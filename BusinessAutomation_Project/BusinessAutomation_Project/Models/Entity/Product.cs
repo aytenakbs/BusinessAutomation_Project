@@ -26,7 +26,9 @@ namespace BusinessAutomation_Project.Models.Entity
         [Column(TypeName = "varchar")]
         [StringLength(250)]
         public string Image { get; set; }
-        public Category Category { get; set; }  
-        public SalesTransaction SalesTransaction { get; set; }
+
+        public int Categoryid { get; set; }
+        public virtual Category Category { get; set; }  
+        public ICollection<SalesTransaction> SalesTransactions { get; set; }
     }
 }

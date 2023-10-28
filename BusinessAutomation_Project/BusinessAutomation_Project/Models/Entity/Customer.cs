@@ -23,6 +23,6 @@ namespace BusinessAutomation_Project.Models.Entity
         [Column(TypeName = "varchar")]
         [StringLength(50)]
         public string Mail { get; set; }
-        public SalesTransaction SalesTransaction { get; set; }
+        public ICollection<SalesTransaction> SalesTransactions { get; set; }
     }
 }
