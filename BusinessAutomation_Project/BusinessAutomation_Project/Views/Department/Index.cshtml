@@ -1,0 +1,24 @@
+﻿@model List<BusinessAutomation_Project.Models.Entity.Department>
+<br/>
+<h2>Departmanlar</h2>
+<br/>
+<table class="table table-bordered">
+	<tr>
+		<th>ID</th>
+		<th>Departman Adı</th>
+		<th>Detaylar</th>
+		<th>Sil</th>
+		<th>Güncelle</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.DepartmentId</td>
+			<td>@item.Name</td>
+			<td><a href="/Department/DetailDepartment/@item.DepartmentId" class="btn btn-warning">Detaylar</a></td>
+			<td><a href="/Department/DeleteDepartment/@item.DepartmentId" class="btn btn-danger">Sil</a></td>
+			<td><a href="/Department/GetDepartment/@item.DepartmentId" class="btn btn-success">Güncelle</a></td>
+		</tr>
+	}
+</table>
+<a href="/Department/AddDepartment/" class="btn btn-primary">Departman Ekle</a>

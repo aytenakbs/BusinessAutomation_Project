@@ -14,6 +14,8 @@ namespace BusinessAutomation_Project.Models.Entity
         [Column(TypeName = "varchar")]
         [StringLength(30)]
         public string Name { get; set; }
+
+        public bool Status { get; set; }
         public ICollection<Employee> Employees { get; set; }
     }
 }

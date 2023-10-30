@@ -1,0 +1,21 @@
+﻿@using FormMethod = System.Web.Mvc.FormMethod
+@model BusinessAutomation_Project.Models.Entity.Department
+<br />
+<h2>Departman Güncelleme</h2>
+<br />
+@using (Html.BeginForm("UpdateDepartment", "Department", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Departman Adı</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <br/>
+        <label>Durum</label>
+        <div>
+	        @Html.RadioButtonFor(x => x.Status, true) <label>Aktif</label>
+	        @Html.RadioButtonFor(x => x.Status, false) <label>Pasif</label>
+        </div>
+        @Html.HiddenFor(x => x.DepartmentId)
+    </div>
+    <br />
+    <button class="btn btn-warning">Değişiklikleri Kaydet</button>
+}

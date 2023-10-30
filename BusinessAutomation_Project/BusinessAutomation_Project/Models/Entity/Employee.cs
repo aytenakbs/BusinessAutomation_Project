@@ -22,6 +22,7 @@ namespace BusinessAutomation_Project.Models.Entity
         [StringLength(230)]
         public string Image { get; set; }
         public ICollection<SalesTransaction> SalesTransactions { get; set; }
+        public int Departmentid { get; set; }
         public virtual Department Department { get; set; }
     }
 }

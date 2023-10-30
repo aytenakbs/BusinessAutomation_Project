@@ -11,18 +11,23 @@ namespace BusinessAutomation_Project.Models.Entity
     {
         [Key]
         public int CustomerId { get; set; }
+        [Required(ErrorMessage="Bu alan zorunludur")]
         [Column(TypeName = "varchar")]
-        [StringLength(30)]
+        [StringLength(30,ErrorMessage = "Girilen isim en fazla 30 karakter olabilir")]
         public string Name { get; set; }
         [Column(TypeName = "varchar")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "Girilen isim en fazla 30 karakter olabilir")]
+        [Required(ErrorMessage = "Bu alan zorunludur")]
         public string Surname { get; set; }
         [Column(TypeName = "varchar")]
-        [StringLength(20)]
+        [Required(ErrorMessage = "Bu alan zorunludur")]
+        [StringLength(20, ErrorMessage = "Girilen isim en fazla 20 karakter olabilir")]
         public string City { get; set; }
         [Column(TypeName = "varchar")]
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "Girilen isim en fazla 50 karakter olabilir")]
+        [Required(ErrorMessage = "Bu alan zorunludur")]
         public string Mail { get; set; }
+        public bool Status { get; set; }
         public ICollection<SalesTransaction> SalesTransactions { get; set; }
     }
 }

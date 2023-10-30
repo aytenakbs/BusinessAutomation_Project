@@ -1,0 +1,40 @@
+﻿
+@using FormMethod = System.Web.Mvc.FormMethod
+@using SelectListItem = System.Web.Mvc.SelectListItem
+@model BusinessAutomation_Project.Models.Entity.Product
+<br />
+<h2>Ürün Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("UpdateProduct", "Product", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.ProductId)
+    <label>Ürün Adı</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label>Marka</label>
+    @Html.TextBoxFor(x => x.Brand, new { @class = "form-control" })
+    <br />
+    <label>Stok Adedi</label>
+    @Html.TextBoxFor(x => x.Stock, new { @class = "form-control" })
+    <br />
+    <label>Alış Fiyatı</label>
+    @Html.TextBoxFor(x => x.PurchasePrice, new { @class = "form-control" })
+    <br />
+    <label>Satış Fiyatı</label>
+    @Html.TextBoxFor(x => x.SalesPrice, new { @class = "form-control" })
+    <br />
+	<label>Kategori</label>
+	@Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+	<br />
+    <label>Durum</label>
+    <div>
+        @Html.RadioButtonFor(x => x.Status, true) <label>Satışta</label>
+        @Html.RadioButtonFor(x => x.Status, false) <label>Satışta Değil</label>
+    </div>
+    @*@Html.TextBoxFor(x => x.Status, new { @class = "form-control" })*@
+    <br />
+    <label>Görsel</label>
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+ }

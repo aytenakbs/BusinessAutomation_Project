@@ -1,15 +1,16 @@
-﻿@using FormMethod = Microsoft.AspNetCore.Mvc.Rendering.FormMethod
+﻿
+@using FormMethod = System.Web.Mvc.FormMethod
 @model BusinessAutomation_Project.Models.Entity.Category
-<br/>
+<br />
 <h2>Kategori Güncelleme</h2>
-<br/>
+<br />
 @using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
 {
-	<div class="form-group">
-		<label>Kategori Adı</label>
-		@Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-		@Html.HiddenFor(x=>x.CategoryId)
-	</div>
-	<br/>
-	<button class="btn btn-warning">Değişiklikleri Kaydet</button>
+    <div class="form-group">
+        <label>Kategori Adı</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.CategoryId)
+    </div>
+    <br />
+    <button class="btn btn-warning">Değişiklikleri Kaydet</button>
 }

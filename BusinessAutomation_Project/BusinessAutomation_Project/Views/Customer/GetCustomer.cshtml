@@ -1,0 +1,25 @@
+﻿
+@using FormMethod = System.Web.Mvc.FormMethod
+@model BusinessAutomation_Project.Models.Entity.Customer
+<br/>  
+<h2>Cari Hesap Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("UpdateCustomer","Customer",FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.CustomerId)
+        <label>Ürün Adı</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <br />
+        <label>Marka</label>
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+        <br />
+        <label>Stok Adedi</label>
+        @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+        <br />
+        <label>Alış Fiyatı</label>
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}

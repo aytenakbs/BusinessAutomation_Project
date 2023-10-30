@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 using BusinessAutomation_Project.Models.Entity;
 
 namespace BusinessAutomation_Project.Controllers
@@ -23,16 +20,18 @@ namespace BusinessAutomation_Project.Controllers
             List<SelectListItem> value1 = (from x in db.Categories.ToList()
                                            select new SelectListItem
                                            {
-                                               Value = x.CategoryId.ToString(),
-                                               Text = x.Name
+                                               Text = x.Name,
+                                               Value = x.CategoryId.ToString()
                                            }).ToList();
             ViewBag.dgr1 = value1;
+            
             return View();
         }
         [HttpPost]
         public ActionResult AddProduct(Product p)
         {
             db.Products.Add(p);
+            
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -43,6 +42,35 @@ namespace BusinessAutomation_Project.Controllers
             value.Status = false;
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult GetProduct(int id)
+        {
+            List<SelectListItem> value1 = (from x in db.Categories.ToList()
+                select new SelectListItem
+                {
+                    Text = x.Name,
+                    Value = x.CategoryId.ToString()
+                }).ToList();
+            ViewBag.dgr1 = value1;
+            var value = db.Products.Find(id);
+            return View(value);
+        }
+
+        public ActionResult UpdateProduct(Product p)
+        {
+            var value = db.Products.Find(p.ProductId);
+            
+            value.CategoryId = p.CategoryId;
+            value.Brand=p.Brand;
+            value.Name=p.Name;
+            value.Image=p.Image;
+            value.PurchasePrice=p.PurchasePrice;
+            value.SalesPrice=p.SalesPrice;
+            value.Stock=p.Stock;
+            value.Status = p.Status;
+            db.SaveChanges();
+            return RedirectToAction("index");
         }
     }
 }

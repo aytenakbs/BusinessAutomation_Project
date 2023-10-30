@@ -1,0 +1,31 @@
+﻿@model List<BusinessAutomation_Project.Models.Entity.SalesTransaction>
+<br />
+<h2>Carinin Geçmiş Siparişleri</h2>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">* @ViewBag.dgr1</li>
+</ol>
+<table class="table table-primary">
+    <tr>
+        <th>Satış ID</th>
+        <th>Ürün</th>
+        <th>Cari</th>
+        <th>Birim Fiyat</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+        <th>Yazdır</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SalesId</td>
+            <td>@item.Product.Name</td>
+            <td>@item.Employee.Name @item.Employee.Surname</td>
+            <td>@item.Price</td>
+            <td>@item.Amount</td>
+            <td>@item.Total</td>
+            <td>@item.Date</td>
+            <td><a href="#" class="btn btn-info">Yazdır</a></td>
+        </tr>
+    }
+</table>

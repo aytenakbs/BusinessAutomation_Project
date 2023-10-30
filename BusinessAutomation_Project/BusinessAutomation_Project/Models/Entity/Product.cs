@@ -27,7 +27,7 @@ namespace BusinessAutomation_Project.Models.Entity
         [StringLength(250)]
         public string Image { get; set; }
 
-        public int Categoryid { get; set; }
+        public int CategoryId { get; set; }
         public virtual Category Category { get; set; }  
         public ICollection<SalesTransaction> SalesTransactions { get; set; }
     }
