@@ -1,0 +1,33 @@
+﻿
+@using FormMethod = System.Web.Mvc.FormMethod
+@using SelectListItem = System.Web.Mvc.SelectListItem
+@model BusinessAutomation_Project.Models.Entity.SalesTransaction
+<br />
+<h3>Satış Güncelleme Sayfası</h3>
+<br />
+@using (Html.BeginForm("UpdateSales", "Sales", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.SalesId)
+    <label>Ürün</label>
+    @Html.DropDownListFor(x => x.Productid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    <br />
+    <label>Cari</label>
+    @Html.DropDownListFor(x => x.Customerid, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    <br />
+    <label>Personel</label>
+    @Html.DropDownListFor(x => x.Employeeid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+    <br />
+    <label>Adet</label>
+    @Html.TextBoxFor(x => x.Amount, new { @class = "form-control" })
+    <br />
+    <label>Fiyat</label>
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    <label>Toplam</label>
+	@Html.TextBoxFor(x=>x.Total,new{@class="form-control"})
+    <br />
+    <label>Tarih</label>
+	@Html.TextBoxFor(x=>x.Date,new{@class="form-control"})
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+}

@@ -1,0 +1,52 @@
+﻿@model List<BusinessAutomation_Project.Models.Entity.SalesTransaction>
+<br />
+<h3>Satışlar</h3>
+<br />
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Satış ID</th>
+            <th>Ürün</th>
+            <th>Cari</th>
+            <th>Personel</th>
+            <th>Adet</th>
+            <th>Fiyat</th>
+            <th>Toplam</th>
+            <th>Tarih</th>
+            <th>Güncelle</th>
+            <th>Detaylar</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SalesId</td>
+            <td>@item.Product.Name</td>
+            <td>@item.Customer.Name @item.Customer.Surname</td>
+            <td>@item.Employee.Name @item.Employee.Surname</td>
+            <td>@item.Amount</td>
+            <td>@item.Price</td>
+            <td>@item.Total</td>
+            <td>@item.Date</td>
+            <td><a href="/Sales/GetSales/@item.SalesId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Sales/DetailSales/@item.SalesId" class="btn btn-warning">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Sales/AddSales/" class="btn btn-primary">Satış Ekle</a>
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#tbl1').dataTable({});
+</script>
+

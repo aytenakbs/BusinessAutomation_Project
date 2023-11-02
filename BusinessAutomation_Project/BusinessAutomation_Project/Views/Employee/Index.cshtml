@@ -1,0 +1,27 @@
+﻿@model List<BusinessAutomation_Project.Models.Entity.Employee>
+<br/>
+<h3>Personeller</h3>
+<br/>
+<table class="table table-bordered">
+	<tr>
+		<th>Personel ID</th>
+		<th>Ad</th>
+		<th>Soyad</th>
+		<th>Görsel</th>
+		<th>Departman</th>
+		<th>Güncelle</th>
+		<th>Satışlar</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+        <tr>
+            <td>@item.EmployeeId</td>
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@item.Image</td>
+            <td>@item.Department.Name</td>
+            <td><a href="/Employee/GetEmployee/@item.EmployeeId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Department/EmpSalesDepartment/@item.EmployeeId" class="btn btn-warning">Satışlar</a></td>
+        </tr>
+	}
+</table>

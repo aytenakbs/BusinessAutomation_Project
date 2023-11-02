@@ -21,13 +21,16 @@ namespace BusinessAutomation_Project.Models.Entity
         [Column(TypeName = "varchar")]
         [StringLength(30)]
         public string TaxOffice { get; set; }
-        public DateTime Time { get; set; }
+        [Column(TypeName = "char")]
+        [StringLength(5)]
+        public string Time { get; set; }
         [Column(TypeName = "varchar")]
         [StringLength(30)]
         public string Deliverer { get; set; }
         [Column(TypeName = "varchar")]
         [StringLength(30)]
         public string Recipient { get; set; }
+        public decimal Total { get; set; }
         public ICollection<InvoiceItem> InvoiceItems { get; set; }
     }
 }

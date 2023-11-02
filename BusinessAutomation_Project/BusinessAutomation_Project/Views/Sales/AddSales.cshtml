@@ -1,0 +1,30 @@
+﻿
+@using SelectListItem = System.Web.Mvc.SelectListItem
+@model BusinessAutomation_Project.Models.Entity.SalesTransaction
+<br/>
+<h3>Yeni Satış Ekleme Sayfası</h3>
+<br/>
+<form class="form-group" method="post">
+    <label>Ürün</label>
+    @Html.DropDownListFor(x => x.Productid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    <br />
+    <label>Cari</label>
+    @Html.DropDownListFor(x => x.Customerid, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    <br />
+    <label>Personel</label>
+    @Html.DropDownListFor(x => x.Employeeid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+    <br />
+    <label>Adet</label>
+    <input type="text" class="form-control" name="Amount" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" class="form-control" name="Price" />
+    <br />
+    <label>Toplam</label>
+    <input type="text" class="form-control" name="Total" />
+    <br />
+    <label>Tarih</label>
+    <input type="text" class="form-control" name="Date" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>

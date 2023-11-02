@@ -1,0 +1,35 @@
+﻿@model List<BusinessAutomation_Project.Models.Entity.Invoice>
+<br />
+<h3>Faturalar</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Seri No</th>
+        <th>Sıra No</th>
+        <th>Vergi Dairesi</th>
+        <th>Tarih</th>
+        <th>Saat</th>
+        <th>Teslim Eden</th>
+        <th>Teslim Alan</th>
+        <th>Toplam</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.InvoiceId</td>
+            <td>@item.SerialNo</td>
+            <td>@item.RotationNo</td>
+            <td>@item.TaxOffice</td>
+            <td>@item.Date</td>
+            <td>@item.Time</td>
+            <td>@item.Deliverer</td>
+            <td>@item.Recipient</td>
+            <td>@item.Total</td>
+            <td><a class="btn btn-success" href="/Invoice/GetInvoice/@item.InvoiceId">Güncelle</a></td>
+            <td><a class="btn btn-warning" href="/Invoice/DetailInvoice/@item.InvoiceId">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Invoice/AddInvoice/" class="btn btn-primary">Yeni Fatura Oluştur</a>

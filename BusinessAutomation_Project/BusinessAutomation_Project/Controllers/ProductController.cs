@@ -72,5 +72,11 @@ namespace BusinessAutomation_Project.Controllers
             db.SaveChanges();
             return RedirectToAction("index");
         }
+
+        public ActionResult ProductList()
+        {
+            var values = db.Products.ToList();
+            return View(values);
+        }
     }
 }

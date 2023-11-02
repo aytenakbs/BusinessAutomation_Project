@@ -17,6 +17,7 @@ namespace BusinessAutomation_Project.Models.Entity
         public int Amount { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal Total { get; set; }
+        public int Invoiceid { get; set; }
         public virtual Invoice Invoice { get; set; }
     }
 }

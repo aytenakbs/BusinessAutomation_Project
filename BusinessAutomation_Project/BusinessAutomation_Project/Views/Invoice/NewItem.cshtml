@@ -1,0 +1,22 @@
+﻿@model BusinessAutomation_Project.Models.Entity.InvoiceItem
+<br />
+<h3>Fatura Kalem Sayfası</h3>
+<br />
+<form class="form-group" method="post">
+	<label>Açıklama</label>
+	@Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+	<br />
+	<label>Miktar</label>
+	@Html.TextBoxFor(x => x.Amount, new { @class = "form-control" })
+	<br />
+	<label>Birim Fiyat</label>
+	@Html.TextBoxFor(x => x.UnitPrice, new { @class = "form-control" })
+	<br />
+	<label>Tutar</label>
+	@Html.TextBoxFor(x => x.Total, new { @class = "form-control" })
+	<br />
+	<label>Fatura No</label>
+	@Html.TextBoxFor(x => x.Invoiceid, new { @class = "form-control" })
+	<br />
+	<button class="btn btn-primary">Kaydet</button>
+</form>
