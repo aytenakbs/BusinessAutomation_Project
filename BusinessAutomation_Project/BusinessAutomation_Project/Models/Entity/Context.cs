@@ -18,5 +18,7 @@ namespace BusinessAutomation_Project.Models.Entity
         public DbSet<InvoiceItem> InvoiceItems { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<SalesTransaction> SalesTransactions { get; set; }
+        public DbSet<Detail> Details { get; set; }
+        public DbSet<ToDo>ToDos { get; set; }
     }
 }

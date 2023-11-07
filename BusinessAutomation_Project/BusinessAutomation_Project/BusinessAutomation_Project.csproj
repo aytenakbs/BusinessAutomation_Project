@@ -488,14 +488,20 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Admin.cs" />
     <Compile Include="Models\Entity\Category.cs" />
+    <Compile Include="Models\Entity\ToDo.cs" />
     <Compile Include="Models\Entity\Context.cs" />
     <Compile Include="Models\Entity\Customer.cs" />
     <Compile Include="Models\Entity\Department.cs" />
+    <Compile Include="Models\Entity\Detail.cs" />
     <Compile Include="Models\Entity\Employee.cs" />
     <Compile Include="Models\Entity\Expense.cs" />
+    <Compile Include="Models\Entity\GroupClass.cs" />
+    <Compile Include="Models\Entity\GroupClass1.cs" />
+    <Compile Include="Models\Entity\GroupClass3.cs" />
     <Compile Include="Models\Entity\Invoice.cs" />
     <Compile Include="Models\Entity\InvoiceItem.cs" />
     <Compile Include="Models\Entity\Product.cs" />
+    <Compile Include="Models\Entity\ProductDetail.cs" />
     <Compile Include="Models\Entity\SalesTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -3193,6 +3199,13 @@
     <Content Include="thumber\scss\_site-navbar.scss" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\ProductDetail\Index.cshtml" />
+    <Content Include="Views\Statistic\SimpleTables.cshtml" />
+    <Content Include="Views\Statistic\Partial1.cshtml" />
+    <Content Include="Views\Viewtest.cshtml" />
+    <Content Include="Views\Statistic\Partial2.cshtml" />
+    <Content Include="Views\Statistic\Partial3.cshtml" />
+    <Content Include="Views\Statistic\Partial4.cshtml" />
+    <Content Include="Views\Employee\EmployeeList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

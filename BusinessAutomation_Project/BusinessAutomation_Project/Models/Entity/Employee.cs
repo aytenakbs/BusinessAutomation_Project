@@ -21,6 +21,9 @@ namespace BusinessAutomation_Project.Models.Entity
         [Column(TypeName = "varchar")]
         [StringLength(230)]
         public string Image { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(30)]
+        public string Mail { get; set; }
         public ICollection<SalesTransaction> SalesTransactions { get; set; }
         public int Departmentid { get; set; }
         public virtual Department Department { get; set; }

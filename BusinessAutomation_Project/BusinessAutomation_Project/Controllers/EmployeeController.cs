@@ -64,5 +64,11 @@ namespace BusinessAutomation_Project.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult EmployeeList()
+        {
+            var values = db.Employees.ToList();
+            return View(values);
+        }
     }
 }
