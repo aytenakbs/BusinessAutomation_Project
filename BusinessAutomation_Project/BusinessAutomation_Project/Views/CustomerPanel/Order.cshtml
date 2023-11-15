@@ -1,0 +1,27 @@
+﻿@model List<BusinessAutomation_Project.Models.Entity.SalesTransaction>
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+<br/>
+<h3>Sipariş Geçmişim</h3>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Tarih</th>
+        <th>Adet</th>
+        <th>Fiyat</th>
+        <th>Toplam Tutar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Product.Name</td>
+            <td>@Convert.ToDateTime(item.Date).ToString("dd/MM/yyyy")</td>
+            <td>@item.Amount</td>
+            <td>@item.Price</td>
+            <td>@item.Total</td>
+        </tr>
+    }
+</table>
