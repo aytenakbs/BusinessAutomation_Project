@@ -16,17 +16,21 @@ namespace BusinessAutomation_Project.Models.Entity
         [StringLength(30,ErrorMessage = "Girilen isim en fazla 30 karakter olabilir")]
         public string Name { get; set; }
         [Column(TypeName = "varchar")]
-        [StringLength(30, ErrorMessage = "Girilen isim en fazla 30 karakter olabilir")]
+        [StringLength(30, ErrorMessage = "Bu alan en fazla 30 karakter olabilir")]
         [Required(ErrorMessage = "Bu alan zorunludur")]
         public string Surname { get; set; }
         [Column(TypeName = "varchar")]
         [Required(ErrorMessage = "Bu alan zorunludur")]
-        [StringLength(20, ErrorMessage = "Girilen isim en fazla 20 karakter olabilir")]
+        [StringLength(20, ErrorMessage = "Bu alan en fazla 20 karakter olabilir")]
         public string City { get; set; }
         [Column(TypeName = "varchar")]
-        [StringLength(50, ErrorMessage = "Girilen isim en fazla 50 karakter olabilir")]
+        [StringLength(50, ErrorMessage = "Bu alan en fazla 50 karakter olabilir")]
         [Required(ErrorMessage = "Bu alan zorunludur")]
         public string Mail { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(10, ErrorMessage = "Bu alan en fazla 10 karakter olabilir")]
+        [Required(ErrorMessage = "Bu alan zorunludur")]
+        public string Password { get; set; }
         public bool Status { get; set; }
         public ICollection<SalesTransaction> SalesTransactions { get; set; }
     }
