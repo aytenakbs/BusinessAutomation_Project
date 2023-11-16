@@ -34,13 +34,13 @@ namespace BusinessAutomation_Project.Controllers
         [HttpPost]
         public ActionResult AddEmployee(Employee p)
         {
-            if (Request.Files.Count>0)
+            if (Request.Files.Count > 0)
             {
                 string filename = Path.GetFileName(Request.Files[0].FileName);
                 string scape = Path.GetExtension(Request.Files[0].FileName);
                 string path = "~/images/" + filename + scape;
                 Request.Files[0].SaveAs(Server.MapPath(path));
-                p.Image= "/images/" + filename + scape;
+                p.Image = "/images/" + filename + scape;
             }
             db.Employees.Add(p);
             db.SaveChanges();

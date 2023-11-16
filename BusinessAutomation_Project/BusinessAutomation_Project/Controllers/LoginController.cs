@@ -64,11 +64,11 @@ namespace BusinessAutomation_Project.Controllers
             {
                 FormsAuthentication.SetAuthCookie(values.UserName, false);
                 Session["UserName"] = values.UserName.ToString();
-                return RedirectToAction("index","Category");
+                return RedirectToAction("index", "Category");
             }
             else
             {
-                return RedirectToAction("index","Login");
+                return RedirectToAction("index", "Login");
             }
 
         }

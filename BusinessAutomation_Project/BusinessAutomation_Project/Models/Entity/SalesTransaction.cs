@@ -8,7 +8,7 @@ namespace BusinessAutomation_Project.Models.Entity
 {
     public class SalesTransaction
     {
-        [Key] 
+        [Key]
         public int SalesId { get; set; }
 
         public int Productid { get; set; }
