@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BusinessAutomation_Project.Models.Entity;
+using PagedList;
+using PagedList.Mvc;
 
 namespace BusinessAutomation_Project.Controllers
 {
@@ -11,9 +13,9 @@ namespace BusinessAutomation_Project.Controllers
     {
         // GET: Category
         Context db = new Context();
-        public ActionResult Index()
+        public ActionResult Index(int page=1)
         {
-            var values = db.Categories.ToList();
+            var values = db.Categories.ToList().ToPagedList(page,4);
             return View(values);
         }
         [HttpGet]

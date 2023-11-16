@@ -9,10 +9,14 @@ namespace BusinessAutomation_Project.Controllers
     {
         // GET: Product
         Context db = new Context();
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            var values = db.Products.Where(x => x.Status == true).ToList();
-            return View(values);
+            var values = from x in db.Products select x;
+            if (!string.IsNullOrEmpty(p))
+            {
+                values = values.Where(x => x.Name.Contains(p));
+            }
+            return View(values.ToList());
         }
         [HttpGet]
         public ActionResult AddProduct()

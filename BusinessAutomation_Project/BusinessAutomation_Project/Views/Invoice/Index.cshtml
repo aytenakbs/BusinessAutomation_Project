@@ -3,9 +3,8 @@
 <h3>Faturalar</h3>
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
-        <th>Seri No</th>
-        <th>Sıra No</th>
+        <th>Seri-Sıra No</th>
+        
         <th>Vergi Dairesi</th>
         <th>Tarih</th>
         <th>Saat</th>
@@ -18,9 +17,8 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.InvoiceId</td>
-            <td>@item.SerialNo</td>
-            <td>@item.RotationNo</td>
+            <td>@item.SerialNo @item.RotationNo</td>
+            
             <td>@item.TaxOffice</td>
             <td>@item.Date</td>
             <td>@item.Time</td>

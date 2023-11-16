@@ -11,7 +11,7 @@ namespace BusinessAutomation_Project.Controllers
     public class LoginController : Controller
     {
         // GET: Login
-        Context db=new Context();
+        Context db = new Context();
         public ActionResult Index()
         {
 
@@ -43,13 +43,34 @@ namespace BusinessAutomation_Project.Controllers
             {
                 FormsAuthentication.SetAuthCookie(values.Mail, false);
                 Session["Mail"] = values.Mail.ToString();
-                return RedirectToAction("index","CustomerPanel");
+                return RedirectToAction("index", "CustomerPanel");
             }
-            else 
+            else
+            {
+                return RedirectToAction("index", "Login");
+            }
+
+        }
+        [HttpGet]
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AdminLogin(Admin a)
+        {
+            var values = db.Admins.FirstOrDefault(x => x.UserName == a.UserName && x.Password == a.Password);
+            if (values != null)
+            {
+                FormsAuthentication.SetAuthCookie(values.UserName, false);
+                Session["UserName"] = values.UserName.ToString();
+                return RedirectToAction("index","Category");
+            }
+            else
             {
                 return RedirectToAction("index","Login");
             }
-            
+
         }
     }
 }

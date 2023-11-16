@@ -6,7 +6,7 @@
 </ol>
 <table class="table table-hover">
 	<tr>
-		<th>Satış ID</th>
+		
 		<th>Ürün</th>
 		<th>Cari</th>
 		<th>Birim Fiyat</th>
@@ -18,12 +18,12 @@
 	@foreach (var item in Model)
 	{
 		<tr>
-			<td>@item.SalesId</td>
+			
 			<td>@item.Product.Name</td>
 			<td>@item.Customer.Name @item.Customer.Surname</td>
-			<td>@item.Price</td>
+			<td>@item.Price ₺</td>
 			<td>@item.Amount</td>
-			<td>@item.Total</td>
+			<td>@item.Total ₺</td>
 			<td>@item.Date</td>
 			<td><a href="#" class="btn btn-info">Yazdır</a></td>
 		</tr>

@@ -216,3 +216,7 @@ C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAut
 C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\System.Text.Encodings.Web.xml
 C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\PagedList.dll
+C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\PagedList.Mvc.dll
+C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\PagedList.xml
+C:\Users\ayten\OneDrive\Masaüstü\GitHub\BusinessAutomation_Project\BusinessAutomation_Project\BusinessAutomation_Project\bin\PagedList.Mvc.xml

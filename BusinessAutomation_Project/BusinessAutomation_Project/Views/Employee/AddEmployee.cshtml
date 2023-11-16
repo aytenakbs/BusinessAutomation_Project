@@ -1,20 +1,25 @@
 ﻿@using SelectListItem = System.Web.Mvc.SelectListItem
 @model BusinessAutomation_Project.Models.Entity.Employee
-<br/>  
+<br />
 <h3>Personel Ekleme Sayfası</h3>
 <br />
-<form class="form-group" method="post">
-	<label>Ad</label>
-	@Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-	<br />
-	<label>Soyad</label>
-	@Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
-	<br />
-	<label>Departman</label>
-	@Html.DropDownListFor(x => x.Departmentid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
-	<br />
-	<label>Görsel</label>
-	@Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
-	<br />
-	<button class="btn btn-primary">Kaydet</button>
-</form>
+@using (Html.BeginForm("AddEmployee", "Employee", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <form class="form-group" method="post">
+        <label>Ad</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <br />
+        <label>Soyad</label>
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+        <br />
+        <label>Departman</label>
+        @Html.DropDownListFor(x => x.Departmentid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+        <br />
+        <label>Görsel</label>
+        @*@Html.TextBoxFor(x => x.Image, new { @class = "form-control" })*@
+        <input type="file" name="Image" />
+        <br />
+        <button class="btn btn-primary">Kaydet</button>
+    </form>
+    
+ }

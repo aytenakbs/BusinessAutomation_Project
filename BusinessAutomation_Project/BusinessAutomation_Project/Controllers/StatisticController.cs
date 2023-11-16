@@ -47,7 +47,7 @@ namespace BusinessAutomation_Project.Controllers
             DateTime today = DateTime.Today;
             var value15 = db.SalesTransactions.Count(x => x.Date == today).ToString();
             ViewBag.d15 = value15;
-            var value16 = db.SalesTransactions.Where(x => x.Date == today).Sum(x => x.Total).ToString();
+            var value16 = db.SalesTransactions.Where(x => x.Date == today).Sum(x =>(decimal?)x.Total).ToString();
             ViewBag.d16 = value16;
             return View();
         }

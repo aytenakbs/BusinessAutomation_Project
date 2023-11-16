@@ -1,9 +1,8 @@
-﻿using System;
+﻿using BusinessAutomation_Project.Models.Entity;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using BusinessAutomation_Project.Models.Entity;
 
 namespace BusinessAutomation_Project.Controllers
 {
@@ -35,6 +34,14 @@ namespace BusinessAutomation_Project.Controllers
         [HttpPost]
         public ActionResult AddEmployee(Employee p)
         {
+            if (Request.Files.Count>0)
+            {
+                string filename = Path.GetFileName(Request.Files[0].FileName);
+                string scape = Path.GetExtension(Request.Files[0].FileName);
+                string path = "~/images/" + filename + scape;
+                Request.Files[0].SaveAs(Server.MapPath(path));
+                p.Image= "/images/" + filename + scape;
+            }
             db.Employees.Add(p);
             db.SaveChanges();
             return RedirectToAction("index");
@@ -56,6 +63,14 @@ namespace BusinessAutomation_Project.Controllers
 
         public ActionResult UpdateEmployee(Employee e)
         {
+            if (Request.Files.Count > 0)
+            {
+                string filename = Path.GetFileName(Request.Files[0].FileName);
+                string scape = Path.GetExtension(Request.Files[0].FileName);
+                string path = "~/images/" + filename + scape;
+                Request.Files[0].SaveAs(Server.MapPath(path));
+                e.Image = "/images/" + filename + scape;
+            }
             var empl = db.Employees.Find(e.EmployeeId);
             empl.Name = e.Name;
             empl.Surname = e.Surname;
@@ -72,3 +87,4 @@ namespace BusinessAutomation_Project.Controllers
         }
     }
 }
+
