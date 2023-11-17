@@ -480,6 +480,9 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerPanelController.cs" />
+    <Compile Include="Controllers\Default1Controller.cs" />
+    <Compile Include="Controllers\Default2Controller.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
@@ -497,6 +500,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Admin.cs" />
     <Compile Include="Models\Entity\Category.cs" />
+    <Compile Include="Models\Entity\Class1.cs" />
+    <Compile Include="Models\Entity\Class2.cs" />
+    <Compile Include="Models\Entity\Class3.cs" />
     <Compile Include="Models\Entity\ToDo.cs" />
     <Compile Include="Models\Entity\Context.cs" />
     <Compile Include="Models\Entity\Customer.cs" />
@@ -3275,6 +3281,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="images\" />
+    <Folder Include="Views\Default1\" />
+    <Folder Include="Views\Default2\" />
+    <Folder Include="Views\Default\" />
     <Folder Include="Views\Statistics\" />
   </ItemGroup>
   <ItemGroup>

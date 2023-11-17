@@ -10,10 +10,10 @@ namespace BusinessAutomation_Project.Controllers
     public class CustomerController : Controller
     {
         // GET: Customer
-        Context db =new Context();
+        Context db = new Context();
         public ActionResult Index()
         {
-            var values = db.Customers.Where(x=>x.Status==true).ToList();
+            var values = db.Customers.Where(x => x.Status == true).ToList();
             return View(values);
         }
         [HttpGet]
@@ -30,7 +30,7 @@ namespace BusinessAutomation_Project.Controllers
         }
         public ActionResult DeleteCustomer(int id)
         {
-            var value=db.Customers.Find(id);
+            var value = db.Customers.Find(id);
             value.Status = false;
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -38,7 +38,7 @@ namespace BusinessAutomation_Project.Controllers
 
         public ActionResult GetCustomer(int id)
         {
-            var value=db.Customers.Find(id);
+            var value = db.Customers.Find(id);
             return View(value);
         }
 
@@ -49,10 +49,10 @@ namespace BusinessAutomation_Project.Controllers
                 return View("GetCustomer");
             }
             var values = db.Customers.Find(c.CustomerId);
-            values.City=c.City;
-            values.Mail=c.Mail;
-            values.Name=c.Name;
-            values.Surname=c.Surname;
+            values.City = c.City;
+            values.Mail = c.Mail;
+            values.Name = c.Name;
+            values.Surname = c.Surname;
             db.SaveChanges();
             return RedirectToAction("index");
         }
